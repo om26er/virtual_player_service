@@ -47,7 +47,7 @@ MIDDLEWARE_CLASSES = [
 ]
 
 ROOT_URLCONF = 'virtual_player_service.urls'
-AUTH_USER_MODEL = 'virtual_player_service.User'
+AUTH_USER_MODEL = 'player.User'
 
 TEMPLATES = [
     {
@@ -65,6 +65,12 @@ TEMPLATES = [
         },
     },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}
 
 WSGI_APPLICATION = 'virtual_player_service.wsgi.application'
 
