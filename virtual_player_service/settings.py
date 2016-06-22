@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     'player',
     'rest_framework',
     'rest_framework.authtoken',
-    'simplelogin',
+    'simple_login',
 ]
 
 MIDDLEWARE_CLASSES = [

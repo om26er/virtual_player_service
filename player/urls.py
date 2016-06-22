@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from simplelogin import views as simple_login_views
+from simple_login import views as simple_login_views
 
 import player.views as player_views
 from player.models import User
