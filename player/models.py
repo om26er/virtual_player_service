@@ -14,11 +14,11 @@ from virtual_player_service.settings import AUTH_USER_MODEL
 def finalize_account_creation(sender, instance=None, created=False, **kwargs):
     if created:
         Token.objects.create(user=instance)
-        activation_key = ActivationKey.objects.create(user=instance)
-        PasswordResetKey.objects.create(user=instance)
-        send_account_activation_email(instance.email, activation_key.key)
 
         if not instance.is_admin:
+            activation_key = ActivationKey.objects.create(user=instance)
+            PasswordResetKey.objects.create(user=instance)
+            send_account_activation_email(instance.email, activation_key.key)
             instance.set_password(instance.password)
             instance.is_active = False
             instance.save()
