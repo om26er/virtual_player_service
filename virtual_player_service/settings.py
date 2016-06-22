@@ -1,12 +1,12 @@
 import os
 
-from .helpers.setting_helpers import SettingHelpers
+from virtual_player_service.helpers import ConfigHelpers
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 CONFIG_FILE = os.path.expanduser('~/virtual_player_config.ini')
-config_helpers = SettingHelpers(CONFIG_FILE)
+config_helpers = ConfigHelpers(CONFIG_FILE)
 
 
 # Quick-start development settings - unsuitable for production
@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'player',
     'rest_framework',
     'rest_framework.authtoken',
+    'simplelogin',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -48,6 +49,7 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'virtual_player_service.urls'
 AUTH_USER_MODEL = 'player.User'
+APP_NAME = 'Virtual player'
 
 TEMPLATES = [
     {
