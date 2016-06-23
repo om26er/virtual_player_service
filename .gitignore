@@ -1,1 +1,5 @@
-.idea/*
+.idea/
+player/__pycache__/
+player/migrations/
+templates/
+virtual_player_service/__pycache__/

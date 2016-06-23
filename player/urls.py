@@ -35,10 +35,10 @@ urlpatterns = [
     ),
     url(
         r'^api/users/me$',
-        player_views.UserDetailsView.as_view()
+        player_views.RetrieveUpdateDestroyProfile.as_view()
     ),
     url(
-        r'^api/users/status',
+        r'^api/users/status$',
         simple_login_views.AccountStatus.as_view(user_model=User)
     ),
 ]
