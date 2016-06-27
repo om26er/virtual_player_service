@@ -1,7 +1,6 @@
 from rest_framework.generics import CreateAPIView
 from simple_login.views import (
     RetrieveUpdateDestroyProfileView,
-    AccountActivationAPIView,
     LoginAPIView,
 )
 
@@ -13,10 +12,6 @@ class UserRegistrationView(CreateAPIView):
 
 
 class RetrieveUpdateDestroyProfile(RetrieveUpdateDestroyProfileView):
-    serializer_class = UserSerializer
-
-
-class ActivateAccount(AccountActivationAPIView):
     serializer_class = UserSerializer
 
 

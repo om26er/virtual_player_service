@@ -12,14 +12,6 @@ urlpatterns = [
         player_views.UserRegistrationView.as_view()
     ),
     url(
-        r'^api/users/request_activation_key$',
-        simple_login_views.RequestActivationKey.as_view(user_model=User)
-    ),
-    url(
-        r'^api/users/activate$',
-        player_views.ActivateAccount.as_view(user_model=User)
-    ),
-    url(
         r'^api/password/forgot$',
         simple_login_views.RequestPasswordReset.as_view(
             user_model=User
