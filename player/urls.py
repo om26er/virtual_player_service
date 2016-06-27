@@ -17,7 +17,7 @@ urlpatterns = [
     ),
     url(
         r'^api/users/activate$',
-        simple_login_views.ActivateAccount.as_view(user_model=User)
+        player_views.ActivateAccount.as_view(user_model=User)
     ),
     url(
         r'^api/password/forgot$',
@@ -31,7 +31,7 @@ urlpatterns = [
     ),
     url(
         r'^api/users/login$',
-        simple_login_views.Login.as_view(user_model=User)
+        player_views.Login.as_view(user_model=User)
     ),
     url(
         r'^api/users/me$',
